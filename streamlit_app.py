@@ -1,10 +1,18 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
-st.title('🎈 App Name')
+st.title('🎈 SDSI Elaboration Assistant'
 st.write('Hello world!')
 
-openai_api_key = st.sidebar.text_input('OpenAI API Key')
+# Retrieve the API key from the environment variable
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+# Initialize the OpenAI client with the API key
+openai.api_key = OPENAI_API_KEY
+
+Entreprise_name = st.sidebar.text_input('Entreprise Name')
+
+st.sidebar.file_uploader("Upload SDSI specification", type=["txt"])
 
 def generate_response(input_text):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
