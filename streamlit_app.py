@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
-st.title('🎈 SDSI Elaboration Assistant'
+st.title('🎈 SDSI Elaboration Assistant')
 st.write('Hello world!')
 
 # Retrieve the API key from the environment variable
